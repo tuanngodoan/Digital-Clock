@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="let.ttf">
+            <string>LetsgoDigital-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Digital_Clock" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +26,67 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="b10.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2Dw-0d-B7M">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8CY-z1-zds">
+                                <rect key="frame" x="256" y="104" width="51" height="51"/>
+                                <fontDescription key="fontDescription" name="LetsgoDigital-Regular" family="Let's go Digital" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeE-l4-DEd">
+                                <rect key="frame" x="35" y="163" width="305" height="87"/>
+                                <fontDescription key="fontDescription" name="LetsgoDigital-Regular" family="Let's go Digital" pointSize="87"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Week: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THg-yY-RcF">
+                                <rect key="frame" x="43" y="298" width="125" height="51"/>
+                                <fontDescription key="fontDescription" name="LetsgoDigital-Regular" family="Let's go Digital" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="06/09/2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4S-N8-V5y">
+                                <rect key="frame" x="69" y="390" width="238" height="51"/>
+                                <fontDescription key="fontDescription" name="LetsgoDigital-Regular" family="Let's go Digital" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="THg-yY-RcF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="3UY-xD-emy"/>
+                            <constraint firstItem="R4S-N8-V5y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7LO-MA-qDu"/>
+                            <constraint firstItem="THg-yY-RcF" firstAttribute="top" secondItem="yeE-l4-DEd" secondAttribute="bottom" constant="48" id="7zm-YW-jeh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="R4S-N8-V5y" secondAttribute="trailing" constant="52" id="FGo-rI-Vc1"/>
+                            <constraint firstItem="8CY-z1-zds" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="84" id="KAX-CV-4dm"/>
+                            <constraint firstItem="2Dw-0d-B7M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PlN-hu-AMg"/>
+                            <constraint firstAttribute="trailing" secondItem="2Dw-0d-B7M" secondAttribute="trailing" id="QVJ-X0-Ssx"/>
+                            <constraint firstItem="2Dw-0d-B7M" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UMF-3j-Jhm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8CY-z1-zds" secondAttribute="trailing" constant="52" id="Z3x-oc-WHT"/>
+                            <constraint firstItem="yeE-l4-DEd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dSw-Ru-BBm"/>
+                            <constraint firstItem="R4S-N8-V5y" firstAttribute="top" secondItem="THg-yY-RcF" secondAttribute="bottom" constant="41" id="lDz-RG-IDd"/>
+                            <constraint firstItem="yeE-l4-DEd" firstAttribute="top" secondItem="8CY-z1-zds" secondAttribute="bottom" constant="8" id="rFC-3R-koe"/>
+                            <constraint firstItem="yeE-l4-DEd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="143" id="rzv-3S-L3P"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2Dw-0d-B7M" secondAttribute="bottom" id="wNY-zU-bP1"/>
+                            <constraint firstItem="R4S-N8-V5y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="53" id="yRd-hQ-IfB"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelDate" destination="R4S-N8-V5y" id="gvK-r6-Iet"/>
+                        <outlet property="labelPMAM" destination="8CY-z1-zds" id="Xsq-Pe-Bw7"/>
+                        <outlet property="labelTime" destination="yeE-l4-DEd" id="psY-4c-twM"/>
+                        <outlet property="labelWeek" destination="THg-yY-RcF" id="rp7-AP-kTa"/>
+                        <outlet property="viewBackground" destination="2Dw-0d-B7M" id="EeH-7K-uHg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-736" y="-649"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="b10.jpg" width="750" height="1334"/>
+    </resources>
 </document>
